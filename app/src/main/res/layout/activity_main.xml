@@ -7,22 +7,47 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+    <android.support.constraint.ConstraintLayout
+        android:background="@color/colorAccent"
+        android:id="@+id/constrain"
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蓝牙"
+            android:textOff="关"
+            android:textOn="开"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.76"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="报警"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
 
     <FrameLayout
         android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/colorPrimary"
-        android:id="@+id/toolbar"
-        tools:ignore="InvalidId"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-    </android.support.v7.widget.Toolbar>
+
+
+
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"

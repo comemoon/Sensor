@@ -11,6 +11,7 @@ public class star_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_star_);
         RelativeLayout relativeLayout=(RelativeLayout) findViewById(R.id.star);
