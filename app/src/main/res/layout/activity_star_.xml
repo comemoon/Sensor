@@ -5,7 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/star"
-    android:background="@drawable/star"
+    android:background="@drawable/sensor"
     tools:context=".star_Activity">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="解除报警"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp" />
 
 </RelativeLayout>

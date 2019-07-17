@@ -21,63 +21,71 @@
                 android:scaleType="fitXY"/>
         </LinearLayout>
 
+        <android.support.v7.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:orientation="horizontal">
                 <ImageView
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:src="@drawable/fire"
                     android:id="@+id/image1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content" />
                 <TextView
-                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="火焰："
+                    />
+                <TextView
+                    android:id="@+id/textview1"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="火焰："/>
-        </LinearLayout>
+                    android:text="50"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
-
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="100dp">
                 <ImageView
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:src="@drawable/bigfire"
                     android:id="@+id/image2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="烟雾："/>
                 <TextView
-                    android:layout_weight="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="烟雾："/>
-        </LinearLayout>
-
-
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="100dp">
-                <ImageView
+                    android:id="@+id/textview2"
                     android:layout_weight="1"
-                    android:src="@drawable/wet"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/image3"/>
-                <TextView
-                    android:layout_weight="2"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="温湿度："/>
+                    android:text="310"/>
         </LinearLayout>
+        </android.support.v7.widget.CardView>
+
 
     </LinearLayout>
 

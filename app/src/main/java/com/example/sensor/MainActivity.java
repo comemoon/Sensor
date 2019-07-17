@@ -20,7 +20,7 @@ import com.example.sensor.fragments.ChartFragment;
 import com.example.sensor.fragments.PoliceFragment;
 
 public class MainActivity extends AppCompatActivity {
-
+    private  Button button;
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -51,6 +51,17 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
         replaceFragment(new PoliceFragment());
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
+
+        button=findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,star_Activity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
