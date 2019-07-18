@@ -217,7 +217,7 @@ public class ChartFragment extends Fragment {
         }
     }
 
-
+//
     public void setMarkerView() {
         LineChartMarkView mv = new LineChartMarkView(this.getContext(), xAxis.getValueFormatter());
         mv.setChartView(lineChart);
