@@ -1,14 +1,11 @@
 package com.example.sensor.fragments;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,7 +28,6 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 
 import java.io.InputStream;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -216,14 +212,14 @@ public class ChartFragment extends Fragment {
             Log.e("yy", "e" + e);
         }
     }
-
-//
-    public void setMarkerView() {
-        LineChartMarkView mv = new LineChartMarkView(this.getContext(), xAxis.getValueFormatter());
+    public void setMarkerView(View view) {
+        LineChartMarkView mv = new LineChartMarkView(getActivity(), xAxis.getValueFormatter());
         mv.setChartView(lineChart);
         lineChart.setMarker(mv);
         lineChart.invalidate();
     }
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -242,14 +238,9 @@ public class ChartFragment extends Fragment {
         addLine(dataArrayList,"Humidness",getResources().getColor(R.color.orange));
         @SuppressLint("ResourceType") Drawable drawable=getResources().getDrawable(R.xml.fade_blue);
         setChartFillDrawable(drawable);
-        setMarkerView();
+        setMarkerView(view);
 
-//        public void setMarkerView(View view) {
-//            LineChartMarkView mv = new LineChartMarkView(view.gerContext(), xAxis.getValueFormatter());
-//            mv.setChartView(lineChart);
-//            lineChart.setMarker(mv);
-//            lineChart.invalidate();
-//        }
+
 
 
 //        readExcel(ChartFragment.this);
