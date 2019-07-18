@@ -2,6 +2,7 @@ package com.example.sensor.chart;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.v4.app.Fragment;
 import android.widget.TextView;
 
 import com.example.sensor.R;
@@ -12,6 +13,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.utils.MPPointF;
@@ -23,10 +25,10 @@ public class LineChartMarkView extends MarkerView {
     private TextView tvTime;
     private TextView tvValue0;
     private TextView tvValue1;
-    private IAxisValueFormatter xAxisValueFormatter;
+    private ValueFormatter xAxisValueFormatter;
     DecimalFormat df = new DecimalFormat(".00");
 
-    public LineChartMarkView(Context context, IAxisValueFormatter xAxisValueFormatter) {
+    public LineChartMarkView(Context context, ValueFormatter xAxisValueFormatter) {
         super(context, R.layout.layout_markview);
         this.xAxisValueFormatter = xAxisValueFormatter;
         tvTime = findViewById(R.id.tv_time);
