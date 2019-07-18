@@ -1,6 +1,7 @@
 package com.example.sensor;
 
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +24,7 @@ public class star_Activity extends AppCompatActivity {
                 finish();
             }
         });
-        RelativeLayout relativeLayout=(RelativeLayout) findViewById(R.id.star);
+        ConstraintLayout relativeLayout= (ConstraintLayout) findViewById(R.id.star);
         AlphaAnimation alphaAnimation=new AlphaAnimation(0.1f,1.0f);
         alphaAnimation.setDuration(3000);
         relativeLayout.startAnimation(alphaAnimation);

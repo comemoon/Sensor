@@ -7,11 +7,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <android.support.constraint.ConstraintLayout
-        android:background="@color/colorAccent"
         android:id="@+id/constrain"
         android:layout_width="match_parent"
-        android:layout_height="75dp">
+        android:layout_height="59dp"
+        android:background="@color/colorAccent">
 
         <Switch
             android:id="@+id/switch1"
@@ -25,7 +26,6 @@
             app:layout_constraintHorizontal_bias="0.76"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
 
         <Button
